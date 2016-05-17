@@ -38,13 +38,6 @@ class Ntools:
 		
         async with aiohttp.request('GET', "http://api.hackertarget.com/geoip/?q="+user_input) as resp:
             await self.bot.say("The location of that IP is:\n" + await resp.text())
-
-    @ntools.command()
-    async def upordown(self, user_input: str):
-        """Checks to see if a website is online or not."""
-
-        async with aiohttp.request('GET', "http://api.predator.wtf/upordown/?arguments="+user_input) as resp:
-            await self.bot.say(await resp.text())
 			
     @ntools.command()
     async def dnslookup(self, user_input: str):

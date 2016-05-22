@@ -13,7 +13,7 @@ class Cat:
         self.bot = bot
 		
     @commands.command(pass_context=True)
-    async def cat(self, ctx):
+    async def cats(self, ctx):
         search = "http://random.cat/meow"
         try:
             async with aiohttp.get(search) as r:

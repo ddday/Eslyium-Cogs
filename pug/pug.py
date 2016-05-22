@@ -18,7 +18,7 @@ class Pug:
                 result = await r.json()
             await self.bot.say(result['pug'])
         except:
-            await self.bot.say("Could Not Get An Image")
+            await self.bot.say("Somehow something went wrong.")
 			
 def setup(bot):
     n = Pug(bot)

@@ -18,7 +18,7 @@ class Cat:
                 result = await r.json()
             await self.bot.say(result['file'])
         except:
-            await self.bot.say("Couldnt Get An Image")
+            await self.bot.say("Somehow something went wrong.")
 			
 def setup(bot):
     n = Cat(bot)

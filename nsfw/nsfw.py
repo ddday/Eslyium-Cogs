@@ -165,7 +165,6 @@ class Nsfw:
             except Exception as e:
                 await self.bot.say(":x: `{}`".format(e))
 
-
 def setup(bot):
     n = Nsfw(bot)
     bot.add_cog(n)

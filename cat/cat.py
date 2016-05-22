@@ -1,10 +1,8 @@
 import discord
 from discord.ext import commands
-import aiohttp
 from __main__ import send_cmd_help
 import aiohttp
 from bs4 import BeautifulSoup
-import random
 
 class Cat:
     """Cat commands."""

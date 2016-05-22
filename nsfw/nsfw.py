@@ -15,7 +15,7 @@ class Nsfw:
     async def nsfw(self, ctx):
         """Nsfw Commands"""
         if ctx.invoked_subcommand is None:
-            await self.bot.say("For more info use help nsfw (Proper use for commands nsfw <catagory>.")
+            await self.bot.say("For more info use help nsfw (Proper use for commands nsfw <catagory>)")
 
     @nsfw.command(no_pm=True)
     async def yandere(self):

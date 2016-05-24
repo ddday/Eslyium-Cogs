@@ -147,6 +147,20 @@ class Nsfw:
         except Exception as e:
             await self.bot.say(":x: **Error:** `{}`".format(e))
 
+    @nsfw.command(no_pm=True)
+    async def lolibooru(self):
+        """Random Image From Lolibooru"""
+        try:
+            query = ("https://lolibooru.moe/post/random/")
+            page = await aiohttp.get(query)
+            page = await page.text()
+            soup = BeautifulSoup(page, 'html.parser')
+            image = soup.find(id="image").get("src")
+            image = image.replace(' ','%20')
+            await self.bot.say(image)
+        except Exception as e:
+            await self.bot.say(":x: **Error:** `{}`".format(e))
+
     @nsfw.command(pass_context=True, no_pm=True)
     async def ysearch(self, ctx, *tags: str):
         """Search Yandere With A Tag"""

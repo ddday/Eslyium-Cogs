@@ -9,8 +9,8 @@ class Animal:
     def __init__(self, bot):
         self.bot = bot
 
-    @commands.command(pass_context=True)
-    async def cats(self, ctx):
+    @commands.command()
+    async def cats(self):
         search = "http://random.cat/meow"
         try:
             async with aiohttp.get(search) as r:
@@ -19,8 +19,8 @@ class Animal:
         except:
             await self.bot.say("Couldnt Get An Image")
 
-    @commands.command(pass_context=True)
-    async def pugs(self, ctx):
+    @commands.command()
+    async def pugs(self):
         search = "http://pugme.herokuapp.com/random"
         try:
             async with aiohttp.get(search) as r:
